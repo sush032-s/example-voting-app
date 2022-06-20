@@ -5,8 +5,7 @@ services:
     image: ritikbilala/dockervotingapp_vote:latest
     volumes:
      - ./vote:/app
-    ports:
-      - "80:"
+    ports: EXPOSE 80
 
   redis:
     image: redis:alpine
@@ -25,5 +24,4 @@ services:
     build: ritikbilala/dockervotingapp_result:latest
     volumes:
       - ./result:/app
-    ports:
-      - "8080:"
+    ports: EXPOSE 8080
